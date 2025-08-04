@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  background: url('gradient.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: black;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.layer-blur {
+  height: 0;
+  width: 30rem;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  box-shadow: 0 0 700px 15px white;
+  transform: rotate(-30deg);
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  z-index: 999;
+  position: relative;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ab19ab;
+}
+main{
+     min-height: calc(90vh - 6rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+.content {
+  max-width: 40rem;
+  margin-left: 5%;
+  z-index: 999; 
+}
+.tag-box {
+ position: relative;
+ height: 2.5rem;
+ width: 18rem;
+ border-radius: 50px;
+background: linear-gradient(to right, #868686, #89409a, #bd16ff, #1878ff, #b8faf6, #868686);
+
+  background-size: 200%;
+  animation: animationgradient 2.5s linear infinite;
+  box-shadow: 0 0 15px white;
+}
+@keyframes animationgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.tag-box .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5 ease;
+    cursor: pointer;
+}
+.tag-box .tag:hover {
+    
+    color: rgba(187, 69, 255, 0.457);
+    background-color: rgba(162, 40, 244, 0.275);
+   
+}
+.content h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0;
+  line-height: 1.2;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+}
+.logo {
+  width: 10rem;
+  height: auto;
+  margin-bottom: 0rem;
+}
+.logo:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  color: #891aa4;
+  text-shadow: 0 0 10px rgba(247, 157, 235, 0.776) ;
+}
+.robot {
+position:absolute;
+top: 0;
+right: -20% ;
+}
